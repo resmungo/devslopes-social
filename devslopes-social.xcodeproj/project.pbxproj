@@ -14,6 +14,11 @@
 		C2CFB5072028A01600DE1385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CFB5062028A01600DE1385 /* Assets.xcassets */; };
 		C2CFB50A2028A01600DE1385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CFB5082028A01600DE1385 /* LaunchScreen.storyboard */; };
 		C2CFB52E2028A0F300DE1385 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2CFB52D2028A0F300DE1385 /* GoogleService-Info.plist */; };
+		C2D24F082029FE02006413FB /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D24F072029FE02006413FB /* FancyView.swift */; };
+		C2D24F0B2029FEA1006413FB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D24F0A2029FEA1006413FB /* Constants.swift */; };
+		C2D24F0D202A0027006413FB /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D24F0C202A0027006413FB /* RoundButton.swift */; };
+		C2D24F0F202A03F3006413FB /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D24F0E202A03F3006413FB /* FancyField.swift */; };
+		C2D24F11202A054C006413FB /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D24F10202A054C006413FB /* FancyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		C2CFB5102028A01600DE1385 /* devslopes-socialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "devslopes-socialTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CFB51B2028A01600DE1385 /* devslopes-socialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "devslopes-socialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CFB52D2028A0F300DE1385 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C2D24F072029FE02006413FB /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		C2D24F0A2029FEA1006413FB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C2D24F0C202A0027006413FB /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		C2D24F0E202A03F3006413FB /* FancyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
+		C2D24F10202A054C006413FB /* FancyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,10 @@
 		C2726C7C2028A2A9000E2E58 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C2D24F072029FE02006413FB /* FancyView.swift */,
+				C2D24F0C202A0027006413FB /* RoundButton.swift */,
+				C2D24F0E202A03F3006413FB /* FancyField.swift */,
+				C2D24F10202A054C006413FB /* FancyButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +143,7 @@
 		C2CFB4FE2028A01600DE1385 /* devslopes-social */ = {
 			isa = PBXGroup;
 			children = (
+				C2D24F092029FE94006413FB /* Util */,
 				C2726C7E2028A2BB000E2E58 /* Controller */,
 				C2726C7C2028A2A9000E2E58 /* View */,
 				C2726C7B2028A2A4000E2E58 /* Model */,
@@ -139,6 +154,14 @@
 				C2CFB50B2028A01600DE1385 /* Info.plist */,
 			);
 			path = "devslopes-social";
+			sourceTree = "<group>";
+		};
+		C2D24F092029FE94006413FB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C2D24F0A2029FEA1006413FB /* Constants.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		FECCCD32250DCCB6D4CF79BE /* Pods */ = {
@@ -348,8 +371,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D24F0F202A03F3006413FB /* FancyField.swift in Sources */,
 				C2CFB5022028A01600DE1385 /* SignInVC.swift in Sources */,
+				C2D24F0D202A0027006413FB /* RoundButton.swift in Sources */,
+				C2D24F11202A054C006413FB /* FancyButton.swift in Sources */,
 				C2CFB5002028A01600DE1385 /* AppDelegate.swift in Sources */,
+				C2D24F082029FE02006413FB /* FancyView.swift in Sources */,
+				C2D24F0B2029FEA1006413FB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
