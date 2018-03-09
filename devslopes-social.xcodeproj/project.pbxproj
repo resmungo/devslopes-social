@@ -19,6 +19,7 @@
 		C2D24F0D202A0027006413FB /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D24F0C202A0027006413FB /* RoundButton.swift */; };
 		C2D24F0F202A03F3006413FB /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D24F0E202A03F3006413FB /* FancyField.swift */; };
 		C2D24F11202A054C006413FB /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D24F10202A054C006413FB /* FancyButton.swift */; };
+		C2FB4EC02052D48E00FEAD7E /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB4EBF2052D48E00FEAD7E /* FeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		C2D24F0C202A0027006413FB /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		C2D24F0E202A03F3006413FB /* FancyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		C2D24F10202A054C006413FB /* FancyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
+		C2FB4EBF2052D48E00FEAD7E /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				C2CFB5012028A01600DE1385 /* SignInVC.swift */,
+				C2FB4EBF2052D48E00FEAD7E /* FeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -359,6 +363,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -396,6 +401,7 @@
 				C2CFB5022028A01600DE1385 /* SignInVC.swift in Sources */,
 				C2D24F0D202A0027006413FB /* RoundButton.swift in Sources */,
 				C2D24F11202A054C006413FB /* FancyButton.swift in Sources */,
+				C2FB4EC02052D48E00FEAD7E /* FeedVC.swift in Sources */,
 				C2CFB5002028A01600DE1385 /* AppDelegate.swift in Sources */,
 				C2D24F082029FE02006413FB /* FancyView.swift in Sources */,
 				C2D24F0B2029FEA1006413FB /* Constants.swift in Sources */,

@@ -15,5 +15,6 @@ target 'devslopes-social' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'
+  pod 'SwiftKeychainWrapper'
 
 end
