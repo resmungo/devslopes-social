@@ -73,7 +73,8 @@ class SignInVC: UIViewController {
                 if error == nil {
                     print ("Login success via email")
                     if let user = user {
-                        self.completeSignIn(id: user.uid)
+                        let userData = [ "provider": EmailAuthProviderID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
@@ -82,7 +83,10 @@ class SignInVC: UIViewController {
                         } else {
                             print ("User created with email")
                             if let user = user {
-                                self.completeSignIn(id: user.uid)
+                                let userData = ["provider": EmailAuthProviderID]
+                                
+                                
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                             
                         }
@@ -98,7 +102,8 @@ class SignInVC: UIViewController {
                     print("Unable to auth with Firebase - \(error)")
                 } else {
                     if let user = user {
-                        self.completeSignIn(id: user.uid)
+                        let userData = ["provider": FacebookAuthProviderID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                                             }
                     
                     
@@ -109,7 +114,8 @@ class SignInVC: UIViewController {
                 
             )
         }
-func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+    DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
     let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
     print("Data saved to keychain: \(keychainResult)" )
     performSegue(withIdentifier: "goToFeed", sender: nil)

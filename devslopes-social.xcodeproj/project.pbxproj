@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		058FE67CC70D2AADDA1B63A1 /* Pods_devslopes_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B09945A97502BBE46E9829 /* Pods_devslopes_social.framework */; };
 		C24AC81A2056B71F003A5888 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24AC8192056B71F003A5888 /* CircleView.swift */; };
+		C24B46252077B21D00E402E4 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24B46242077B21D00E402E4 /* PostCell.swift */; };
+		C294619220A0C1880091F8A0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C294619120A0C1880091F8A0 /* DataService.swift */; };
+		C2AA2DDC20A6111A00DF4B8E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA2DDB20A6111A00DF4B8E /* Post.swift */; };
 		C2CFB5002028A01600DE1385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB4FF2028A01600DE1385 /* AppDelegate.swift */; };
 		C2CFB5022028A01600DE1385 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB5012028A01600DE1385 /* SignInVC.swift */; };
 		C2CFB5052028A01600DE1385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CFB5032028A01600DE1385 /* Main.storyboard */; };
@@ -46,6 +49,9 @@
 		9F16D48C3032EFB2B55A0242 /* Pods-devslopes-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopes-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-devslopes-social/Pods-devslopes-social.debug.xcconfig"; sourceTree = "<group>"; };
 		C23512EF2049968900AE1481 /* devslopes-social.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "devslopes-social.entitlements"; sourceTree = "<group>"; };
 		C24AC8192056B71F003A5888 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		C24B46242077B21D00E402E4 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		C294619120A0C1880091F8A0 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		C2AA2DDB20A6111A00DF4B8E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C2CFB4FC2028A01600DE1385 /* devslopes-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "devslopes-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CFB4FF2028A01600DE1385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2CFB5012028A01600DE1385 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 		C2726C7B2028A2A4000E2E58 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C2AA2DDB20A6111A00DF4B8E /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 				C2D24F0E202A03F3006413FB /* FancyField.swift */,
 				C2D24F10202A054C006413FB /* FancyButton.swift */,
 				C24AC8192056B71F003A5888 /* CircleView.swift */,
+				C24B46242077B21D00E402E4 /* PostCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,6 +132,14 @@
 				C2FB4EBF2052D48E00FEAD7E /* FeedVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C294619020A0C16E0091F8A0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C294619120A0C1880091F8A0 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		C2CFB4F32028A01600DE1385 = {
@@ -150,6 +166,7 @@
 		C2CFB4FE2028A01600DE1385 /* devslopes-social */ = {
 			isa = PBXGroup;
 			children = (
+				C294619020A0C16E0091F8A0 /* Services */,
 				C23512EF2049968900AE1481 /* devslopes-social.entitlements */,
 				C2D24F092029FE94006413FB /* Util */,
 				C2726C7E2028A2BB000E2E58 /* Controller */,
@@ -403,12 +420,15 @@
 				C24AC81A2056B71F003A5888 /* CircleView.swift in Sources */,
 				C2D24F0F202A03F3006413FB /* FancyField.swift in Sources */,
 				C2CFB5022028A01600DE1385 /* SignInVC.swift in Sources */,
+				C2AA2DDC20A6111A00DF4B8E /* Post.swift in Sources */,
 				C2D24F0D202A0027006413FB /* RoundButton.swift in Sources */,
 				C2D24F11202A054C006413FB /* FancyButton.swift in Sources */,
+				C294619220A0C1880091F8A0 /* DataService.swift in Sources */,
 				C2FB4EC02052D48E00FEAD7E /* FeedVC.swift in Sources */,
 				C2CFB5002028A01600DE1385 /* AppDelegate.swift in Sources */,
 				C2D24F082029FE02006413FB /* FancyView.swift in Sources */,
 				C2D24F0B2029FEA1006413FB /* Constants.swift in Sources */,
+				C24B46252077B21D00E402E4 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
