@@ -18,7 +18,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
-    
+    var imageSelected = false
     
     
     override func viewDidLoad() {
@@ -56,6 +56,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imageAdd.image = image
+            imageSelected = true
         } else {
             print("DEBUG: Valid image was not selected")
         }
@@ -81,7 +82,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             print("DEBUG: Post failed - no caption.")
             return
         }
-        guard let img = imageAdd.image else {
+        guard let img = imageAdd.image, imageSelected == true else {
             print("DEBUG: Post failed - no image.")
             return
         }
@@ -96,13 +97,35 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                 } else {
                     print("DEBUG: Uploaded image to Firebase Storage")
                     let downloadURL = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadURL {
+                        self.postToFirebase(imgUrl: url)
+                    }
+                    
+                   
+                    
                 }
                 
             }
         }
         
     }
+    func postToFirebase(imgUrl: String) {
+        let post: Dictionary<String, Any> = [
+            "caption": captionField.text!,
+            "imageUrl": imgUrl,
+            "likes": 0
+            
+        ]
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        captionField.text = ""
+        imageSelected = false
+        imageAdd.image = UIImage(named: "add-image")
+        tableView.reloadData()
+        
+        
     
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
