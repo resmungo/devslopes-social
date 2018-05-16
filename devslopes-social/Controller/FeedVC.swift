@@ -12,6 +12,7 @@ import SwiftKeychainWrapper
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var captionField: FancyField!
     @IBOutlet weak var imageAdd: CircleView!
     @IBOutlet weak var tableView: UITableView!
     var posts = [Post]()
@@ -74,6 +75,35 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         
     }
+    
+    @IBAction func postBtnTapped(_ sender: Any) {
+        guard let caption = captionField.text, caption != "" else {
+            print("DEBUG: Post failed - no caption.")
+            return
+        }
+        guard let img = imageAdd.image else {
+            print("DEBUG: Post failed - no image.")
+            return
+        }
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            let imgUid = NSUUID().uuidString
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUid).putData(imgData, metadata: metadata) { (metadata, error) in
+                if error != nil {
+                    print("DEBUG: Unable to upload image to Firebase Storage")
+                } else {
+                    print("DEBUG: Uploaded image to Firebase Storage")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                }
+                
+            }
+        }
+        
+    }
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
