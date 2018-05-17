@@ -272,6 +272,9 @@
                                                                 </stackView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Tre-jl-3QQ">
                                                                     <rect key="frame" x="0.0" y="68" width="335" height="158"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="158" id="wpa-Cj-bgF"/>
+                                                                    </constraints>
                                                                 </imageView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ay1-6f-YWx">
                                                                     <rect key="frame" x="0.0" y="234" width="335" height="50"/>
@@ -324,6 +327,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="Ay1-6f-YWx" id="Cwh-Mh-fQJ"/>
+                                            <outlet property="likeImg" destination="3sx-jz-UlQ" id="O0R-V7-K0h"/>
                                             <outlet property="likesLbl" destination="p2e-Lh-Z0x" id="c4V-Kd-pka"/>
                                             <outlet property="postImg" destination="Tre-jl-3QQ" id="RfK-Nw-WAM"/>
                                             <outlet property="profileImg" destination="rCl-va-tWB" id="Om2-WY-t3t"/>
